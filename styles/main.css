@@ -162,16 +162,16 @@ body main {
 
 /* Input | Flowchart | Main Memory */
 #content-box {
+  height: 65vh;
   width: 100%;
   margin-top: 5rem;
 
   display: flex;
   justify-content: space-evenly;
-  gap: 1rem;
+  gap: 3rem;
 }
-
+  /* Input area */
 #input-area {
-  height: 60vh;
   width: 100%;
 
   display: flex;
@@ -194,7 +194,7 @@ body main {
   align-items: center;
   
   background-color: rgb(0,191,76);
-  background-color: (175deg, rgba(0,191,76,1) 0%, rgba(0,150,60,1) 100%);
+  background-color: linear-gradient(175deg, rgba(0,191,76,1) 0%, rgba(0,150,60,1) 100%);
 
   color: white;
   font-weight: 400;
@@ -209,24 +209,129 @@ body main {
   margin-top: 1rem;
 }
 
+#text-input {
+  height: 70%;
 
-#input-area #input-buttons {
+  border-radius: 0.3rem;
+  border: 1px solid rgb(0,191,76);
+  background-color: transparent;
+  outline-color: rgb(0,191,76);
+}
+
+#input-buttons {
+  height: 4rem;
   width: 100%;
+  margin-top: 1rem;
 
   display: flex;
   justify-content: center;
   gap: 1rem;
 }
 
-#input-area button {
-  width: 40%;
+#input-buttons button {
+  width: 30%;
+
+  border: none;
+  border-radius: 0.3rem;
+
+  color: white;
+  
+  background-color: rgb(0,191,76);
+  background-color: linear-gradient(175deg, rgba(0,191,76,1) 0%, rgba(0,150,60,1) 100%);
+
+  transition: .2s;
 }
 
+#input-buttons button:last-child {
+  border: 1px solid rgb(0,191,76);
+  color: rgb(0,191,76);
+  background-color: transparent;
+}
+
+#input-buttons button:hover {
+  cursor: pointer;
+
+  transform: translateY(-0.15rem);
+}
+
+  /* Diagrama */
 #flowchart {
   width: 100%;
-  background-color: white;
+
+  display: flex;
+  flex-direction: column;
+
+  font-size: 1.5rem;
+  font-weight: 600;
+
+  gap: 3rem;
 }
 
+
+#fatch-cicle, #execute-cicle {
+  height: 50%;
+  position: relative;
+
+  border: 2px dashed rgb(0,191,76);
+  border-radius: 0.3rem;
+}
+
+    /* Register */
+.flowchart-registers {
+  height: 3rem;
+  position: absolute;
+
+  border-radius: 0.3rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: var(--color-background-boxes);
+}
+
+#flowchart-AC {
+  top: 1rem;
+  left: 25%;
+
+  padding: 0 2rem;
+}
+
+#flowchart-MQ {
+  top: 1rem;
+  right: 25%;
+
+  padding: 0 2rem;
+}
+
+#flowchart-CLA {
+  width: 90%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#flowchart-MBR {
+  bottom: 1rem;
+  padding: 0 2rem;
+  right: 50%;
+  transform: translateX(50%);
+}
+
+  /* Memória Principal */
 #main-memory {
   width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#main-memory-bank {
+  height: 85%;
+
+  font-size: 1.2rem;
+  border: none;
+  outline: none;
+  background-color: transparent;
 }
