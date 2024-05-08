@@ -9,46 +9,98 @@
 
     <link rel="stylesheet" href="styles/reset.css" />
     <link rel="stylesheet" href="styles/main.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;600&display=swap" rel="stylesheet">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;600&display=swap" rel="stylesheet" />
 </head>
 
 <body>
     <header>
-        <h1>IAS</h1>
-        <h1>SIMULATOR</h1>
-        <img src="imgs/cursor-do-mouse.png" alt="scroll-down">
+        <h1><strong>IAS</strong> <br> SIMULATOR</h1>
+        <img src="imgs/cursor-do-mouse.png" alt="scroll-down" />
     </header>
+
     <main>
-        <section>
+        <div id="registers-panel">
             <div class="registers" id="mq">
                 <h2>MQ</h2>
                 <p>0</p>
             </div>
+
             <div class="registers" id="ac">
                 <h2>AC</h2>
                 <p>0</p>
             </div>
+
             <div class="registers" id="mbr">
                 <h2>MBR</h2>
-                <p>0</p>
+                <p>00000000000</p>
             </div>
+
             <div class="registers" id="ibr">
                 <h2>IBR</h2>
                 <p>0</p>
             </div>
+
             <div class="registers" id="ir">
                 <h2>IR</h2>
                 <p>0</p>
             </div>
+
             <div class="registers" id="mar">
                 <h2>MAR</h2>
                 <p>0</p>
             </div>
+
             <div class="registers" id="pc">
                 <h2>PC</h2>
                 <p>0</p>
             </div>
-        </section>
+        </div>
+
+        <div id="control-panel">
+            <div id="mode-selector">
+                <input type="checkbox" name="Seletor de modo" id="selector">
+                <span id="slider"></span>
+            </div>
+
+            <div id="general-controls">
+                <button class="control-buttons">
+                    <span>Iniciar</span>
+                    <img src="/imgs/icons/Start.svg" alt="Ícone Iniciar">
+                </button>
+                <button class="control-buttons">
+                    <span>Reniciar</span>
+                    <img src="/imgs/icons/Restart.svg" alt="Ícone Reiniciar">
+                </button>
+                <button class="control-buttons">
+                    <span>Próximo</span>
+                    <img src="/imgs/icons/Next.svg" alt="Ícone Próximo">
+                </button>
+            </div>
+        </div>
+
+        <div id="content-box">
+            <div id="input-area" class="input-memory">
+                <div class="header"><h2>Entrada</h2></div>
+                <textarea name="Entrada" id="text-input" class="text-view" placeholder="Digite o mapa da memória..."></textarea>
+                <div id="input-buttons">
+                    <button id="send">Enviar</button>
+                    <button id="erase">Limpar</button>
+                </div>
+            </div>
+
+            <div id="flowchart"></div>
+
+            <div id="main-memory" class="input-memory">
+                <div class="header"><h2>Memória</h2></div>
+                <span id="main-memory-bank" class="text-view"></span>
+            </div>
+        </div>
+
     </main>
 </body>
 <script src="scripts/script.js"></script>

@@ -5,18 +5,22 @@
 
 body {
   width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
   background-color: var(--color-background);
 }
 
 body header {
-  display: flex;
-  flex-direction: column;
-
-  align-items: center;
-  justify-content: center;
-
   height: 100vh;
   width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 
   background-image: url(/imgs/Background.jpg);
   background-repeat: no-repeat;
@@ -24,19 +28,19 @@ body header {
 }
 
 body header h1 {
+  text-align: center;
   color: white;
   
   font-size: 15rem;
-}
-
-body header h1 {
-  font-family: "Poppins", sans-serif;
-  font-weight: 200;
+  font-family: "Darker Grotesque", sans-serif !important;
+  font-optical-sizing: auto;
   font-style: normal;
+  font-weight: 300;
 }
 
-body header h1:first-child {
-  font-weight: 600;
+body header h1 strong{
+  font-family: "Darker Grotesque", sans-serif !important;
+  font-weight: 700;
 }
 
 
@@ -57,10 +61,11 @@ body header img:hover {
 
 body main {
   height: 95vh;
+  width: 80%;
 }
 
-body main section {
-  position: absolute;
+/* Registers */
+#registers-panel {
   display: flex;
 
   width: 100%;
@@ -75,10 +80,11 @@ body main section {
   justify-content: center;
   align-items: center;
   height: 5rem;
-  width: 5rem;
+  width: 15rem;
 
-  background-color: white;
-  color: rgb(0, 0, 0);
+  background-color: var(--color-background-boxes);
+  color: rgb(0,191,76);
+  color: linear-gradient(175deg, rgba(0,191,76,1) 0%, rgba(0,150,60,1) 100%);
 
   border-radius: 0.5rem;
   margin: 0 .5rem;
@@ -90,7 +96,137 @@ body main section {
   height: 50%;
 
 
-  font-weight: 600;
-  font-size: 1.2rem;
+  font-weight: 900;
+  font-size: 1.4rem;
+}
 
+/* Controls */
+#control-panel {
+  width: 100%;
+  height: 5rem;
+  margin-top: 5rem;
+
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+#mode-selector {
+  position: relative;
+  height: 100%;
+  width: 175px;
+  border-radius: 0.5rem;
+
+  background-color: var(--color-background-boxes);
+}
+
+#general-controls {
+  height: 5rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 1rem;
+  border-radius: 0.5rem;
+
+  background-color: var(--color-background-boxes);
+}
+
+.control-buttons {
+  height: 80%;
+
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  border-left: 1px solid #85858523;
+}
+
+.control-buttons:first-child {
+  border-left: 0px;
+}
+
+.control-buttons span {
+  font-weight: 500;
+  color: rgba(0,150,60,1);
+  color: linear-gradient(0deg, rgba(0,191,76,1) 0%, rgba(0,150,60,1) 100%);
+  box-shadow: 5px;
+}
+
+.control-buttons img {
+  margin-left: 0.5rem;
+}
+
+/* Input | Flowchart | Main Memory */
+#content-box {
+  width: 100%;
+  margin-top: 5rem;
+
+  display: flex;
+  justify-content: space-evenly;
+  gap: 1rem;
+}
+
+#input-area {
+  height: 60vh;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.input-memory {
+  border-radius: 0.5rem;
+  background-color: var(--color-background-boxes);
+}
+
+.header {
+  height: 3rem;
+  width: 100%;
+  border-radius: 0.5rem 0.5rem 0 0;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  background-color: rgb(0,191,76);
+  background-color: (175deg, rgba(0,191,76,1) 0%, rgba(0,150,60,1) 100%);
+
+  color: white;
+  font-weight: 400;
+  font-size: 1.5rem;
+}
+
+.header h2, .text-view{
+  width: 90%;
+}
+
+.text-view {
+  margin-top: 1rem;
+}
+
+
+#input-area #input-buttons {
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+#input-area button {
+  width: 40%;
+}
+
+#flowchart {
+  width: 100%;
+  background-color: white;
+}
+
+#main-memory {
+  width: 100%;
 }
