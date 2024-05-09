@@ -37,7 +37,7 @@
 
             <div class="registers" id="mbr">
                 <h2>MBR</h2>
-                <p>00000000000</p>
+                <p>0</p>
             </div>
 
             <div class="registers" id="ibr">
@@ -99,6 +99,18 @@
                     <div id="flowchart-MQ" class="flowchart-registers">MQ</div>
                     <div id="flowchart-CLA" class="flowchart-registers">CIRCUITOS LÓGICO-ARITMÉTICOS</div>
                     <div id="flowchart-MBR" class="flowchart-registers">MBR</div>
+
+                    <img id="mq-ac" class="arrows" src="imgs/icons/Arrow-left-small.svg" alt="Seta MQ - AC">
+                    <img id="cla-ac" class="arrows" src="/imgs/icons/Arrow-up.svg" alt="Seta CLA - AC">
+                    <img id="ac-cla" class="arrows" src="/imgs/icons/Arrow-down.svg" alt="Seta AC - CLA">
+                    <img id="cla-mq" class="arrows" src="/imgs/icons/Arrow-up.svg" alt="Seta CLA - MQ">
+                    <img id="mq-cla" class="arrows" src="/imgs/icons/Arrow-down.svg" alt="Seta MQ - CLA">
+                    <img id="mbr-cla" class="arrows" src="/imgs/icons/Arrow-up.svg" alt="Seta MBR - CLA">
+                    <img id="cla-mbr" class="arrows" src="/imgs/icons/Arrow-down.svg" alt="Seta CLA - MBR">
+                    <img id="" class="arrows" src="" alt="">
+                    <img id="" class="arrows" src="" alt="">
+                    <img id="" class="arrows" src="" alt="">
+                    <img id="" class="arrows" src="" alt="">
                 </div>
                 <div id="execute-cicle">
                     <div id="flowchart-IBR" class="flowchart-registers">IBR</div>
@@ -106,12 +118,17 @@
                     <div id="flowchart-IR" class="flowchart-registers">IR</div>
                     <div id="flowchart-MAR" class="flowchart-registers">MAR</div>
                     <div id="flowchart-CC" class="flowchart-registers">CIRCUITOS DE CONTROLE</div>
+
+                    <img id="ibr-ir" class="arrows" src="/imgs/icons/Arrow-down.svg" alt="Seta ">
+                    <img id="mar-pc" class="arrows" src="/imgs/icons/Arrow-up.svg" alt="Seta ">
+                    <img id="pc-mar" class="arrows" src="/imgs/icons/Arrow-down.svg" alt="Seta ">
+                    <img id="ir-cc" class="arrows" src="/imgs/icons/Arrow-down.svg" alt="Seta ">
                 </div>
             </div>
 
             <div id="main-memory" class="input-memory">
                 <div class="header"><h2>Memória</h2></div>
-                <textarea id="main-memory-bank" class="text-view" placeholder="Vazia."></textarea>
+                <textarea id="main-memory-bank" class="text-view" placeholder="Vazia." disabled></textarea>
             </div>
         </div>
 

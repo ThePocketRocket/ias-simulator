@@ -43,7 +43,6 @@ body header h1 strong{
   font-weight: 700;
 }
 
-
 body header img {
   position: absolute;
   bottom: 10vh;
@@ -64,6 +63,7 @@ body main {
   width: 80%;
 }
 
+
 /* Registers */
 #registers-panel {
   display: flex;
@@ -80,7 +80,7 @@ body main {
   justify-content: center;
   align-items: center;
   height: 5rem;
-  width: 15rem;
+  width: 10%;
 
   background-color: var(--color-background-boxes);
   color: rgb(0,191,76);
@@ -99,6 +99,7 @@ body main {
   font-weight: 900;
   font-size: 1.4rem;
 }
+
 
 /* Controls */
 #control-panel {
@@ -160,6 +161,7 @@ body main {
   margin-left: 0.5rem;
 }
 
+
 /* Input | Flowchart | Main Memory */
 #content-box {
   height: 65vh;
@@ -185,7 +187,7 @@ body main {
 }
 
 .header {
-  height: 3rem;
+  height: 7%;
   width: 100%;
   border-radius: 0.5rem 0.5rem 0 0;
   
@@ -193,7 +195,7 @@ body main {
   justify-content: center;
   align-items: center;
   
-  background-color: rgb(0,191,76);
+  background-color: rgba(0,150,60,1);
   background-color: linear-gradient(175deg, rgba(0,191,76,1) 0%, rgba(0,150,60,1) 100%);
 
   color: white;
@@ -210,7 +212,7 @@ body main {
 }
 
 #text-input {
-  height: 70%;
+  height: 75%;
 
   border-radius: 0.3rem;
   border: 1px solid rgb(0,191,76);
@@ -229,7 +231,7 @@ body main {
 }
 
 #input-buttons button {
-  width: 30%;
+  width: 25%;
 
   border: none;
   border-radius: 0.3rem;
@@ -278,6 +280,7 @@ body main {
 
     /* Register */
 .flowchart-registers {
+  width: 20%;
   height: 3rem;
   position: absolute;
 
@@ -292,30 +295,112 @@ body main {
 
 #flowchart-AC {
   top: 1rem;
-  left: 25%;
-
-  padding: 0 2rem;
+  left: 15%;
 }
 
 #flowchart-MQ {
   top: 1rem;
-  right: 25%;
-
-  padding: 0 2rem;
+  right: 15%;
 }
 
 #flowchart-CLA {
-  width: 90%;
+  width: 70%;
+
   top: 50%;
   left: 50%;
+
   transform: translate(-50%, -50%);
 }
 
 #flowchart-MBR {
   bottom: 1rem;
-  padding: 0 2rem;
   right: 50%;
+
   transform: translateX(50%);
+}
+
+#flowchart-IBR {
+  top: 1rem;
+  left: 15%;
+}
+
+#flowchart-PC {
+  top: 1rem;
+  right: 15%;
+}
+
+#flowchart-IR {
+  top: 50%;
+  left: 15%;
+
+  transform: translateY(-50%);
+}
+
+#flowchart-MAR {
+  top: 50%;
+  right: 15%;
+
+  transform: translateY(-50%);
+}
+
+#flowchart-CC {
+  width: 70%;
+
+  bottom: 1rem;
+  right: 50%;
+
+  transform: translateX(50%);
+}
+
+    /* Arrows */
+.arrows {
+  position: absolute;
+}
+
+#mq-ac {
+  width: 28%;
+  top: 7.5%;
+  right: 36%;
+}
+
+#cla-ac {
+  top: 22%;
+  left: 17%;
+}
+
+#ac-cla {
+  top: 22%;
+  left: 29%;
+}
+
+#cla-mq, #mar-pc {
+  top: 22%;
+  right: 29%;
+}
+
+#mq-cla, #pc-mar {
+  top: 22%;
+  right: 17%;
+}
+
+#mbr-cla {
+  bottom: 22%;
+  right: 55%;
+}
+
+#cla-mbr {
+  bottom: 22%;
+  left: 55%;
+}
+
+#ibr-ir {
+  top: 22%;
+  left: 22.5%;
+}
+
+#ir-cc {
+  bottom: 22%;
+  left: 22.5%;
 }
 
   /* Memória Principal */
@@ -330,7 +415,7 @@ body main {
 #main-memory-bank {
   height: 85%;
 
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   border: none;
   outline: none;
   background-color: transparent;
